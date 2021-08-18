@@ -1,0 +1,22 @@
+{
+  "name": "inject-tags-webpack-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hei-Ha/inject-tags-webpack-plugin.git"
+  },
+  "author": "heiha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hei-Ha/inject-tags-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/Hei-Ha/inject-tags-webpack-plugin#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2"
+  }
+}
