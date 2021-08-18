@@ -1,6 +1,6 @@
 ## inject-tags-webpack-plugin
 
-*向 webpack 入口文件（模版文件）添加指定标签*
+*向 webpack 入口文件（模版文件）添加标签*
 
 #### Configuration
 1、安装
