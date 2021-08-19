@@ -1,4 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import cheerio from 'cheerio'
+
 
 class plugins {
     constructor(operation) {
@@ -9,15 +11,18 @@ class plugins {
     }
     apply(compiler) {
         compiler.hooks.compilation.tap('plugins', (compilation) => {
-            HtmlWebpackPlugin.getHooks(compilation).afterTemplateExecution.tap(
+            HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tap(
                 'afterTemplateExecution', (data) => {
-                    if (this.options.position === 'before') {
+                    const $ = cheerio.load(data.html)
+                    if (this.options.position === 'begin') {
                         for (let i = 0; i < this.options.tags.length; i++) {
-                            data.html = data.html.replace(`${this.options.tags[i].target}`, `${this.options.tags[i].tag}${this.options.tags[i].target}`)
+                            $(`${this.options.tags[i].tag}`).prependTo(`${this.options.tags[i].target}`)
+                            data.html = $.html()
                         }
                     } else {
                         for (let i = 0; i < this.options.tags.length; i++) {
-                            data.html = data.html.replace(`${this.options.tags[i].target}`, `${this.options.tags[i].target}${this.options.tags[i].tag}`)
+                            $(`${this.options.tags[i].tag}`).appendTo(`${this.options.tags[i].target}`)
+                            data.html = $.html()
                         }
                     }
                 }

@@ -16,11 +16,11 @@ import InjectTagsWebpackPlugin from 'inject-tags-webpack-plugin'
 export default {
     plugins: [
     new PluginTest({
-          position: 'before',
+          position: 'begin',
           tags: [
                 {
-                  tag: `<script>window.onload = function (){ console.log(inject-tags-webpack-plugin) }</script>`,
-                  target: '</body>'
+                  tag: `<script>window.onload = function (){ console.log(This is inject-tags-webpack-plugin) }</script>`,
+                  target: 'body'
                 }
           ]
         })
