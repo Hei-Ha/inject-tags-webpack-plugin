@@ -20,7 +20,6 @@ class plugins {
                             data.html = data.html.replace(`${this.options.tags[i].target}`, `${this.options.tags[i].target}${this.options.tags[i].tag}`)
                         }
                     }
-                    console.log(data.html)
                 }
             )
         })
