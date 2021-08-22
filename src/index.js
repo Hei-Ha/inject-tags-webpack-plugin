@@ -1,6 +1,5 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import cheerio from 'cheerio'
-
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cheerio = require('cheerio')
 
 class plugins {
     constructor(operation) {
@@ -31,4 +30,4 @@ class plugins {
     }
 }
 
-export default plugins
+module.exports = plugins
