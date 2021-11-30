@@ -1,16 +1,19 @@
-## inject-tags-webpack-plugin
+# inject-tags-webpack-plugin
 
-*向 webpack 入口文件（模版文件）添加标签*
+### 插件作用：
+在 webpack 打包过程中，在入口文件中，向指定位置添加指定的内容
 
-#### Configuration
-1、安装
+#### 安装
 ```shell
 npm install -D inject-tags-webpack-plugin
 or
 yarn add inject-tags-webpack-plugin --dev
 ```
-2、配置
+### 使用
+
+和其它 `webpack` 插件使用方法一样
 ```javascript
+// 在 body 标签开始的地方，添加 tag 内容
 import InjectTagsWebpackPlugin from 'inject-tags-webpack-plugin'
 
 export default {
